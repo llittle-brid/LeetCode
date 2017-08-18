@@ -13,7 +13,7 @@ public class _3Sum {
      * @param nums
      * @return
      */
-    public List<List<Integer>> foolish(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         HashSet<Integer> hash=new HashSet<>();
         List<List<Integer>> res=new ArrayList<>();
         sort(0,nums.length-1,nums);
@@ -63,6 +63,6 @@ public class _3Sum {
 
     public static void main(String[] args) {
         _3Sum sum=new _3Sum();
-        sum.foolish(new  int[]{-1,0,1,2,-1,-4});
+        sum.threeSum(new  int[]{-1,0,1,2,-1,-4});
     }
 }
