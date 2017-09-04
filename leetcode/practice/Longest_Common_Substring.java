@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Created by DELL on 2017/9/4.
- *
+ * 美团笔试第二题
  * @author MJY
  */
 public class Longest_Common_Substring {
