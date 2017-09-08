@@ -8,7 +8,7 @@ import java.util.List;
  * @author MJY
  */
 public class Letter_Combinations_of_a_Phone_Number {
-    static String[] mapping=new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    static String[] mapping={"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     public List<String> letterCombinations(String digits) {
         //queue：FIFO
@@ -47,6 +47,11 @@ public class Letter_Combinations_of_a_Phone_Number {
     }
 
     public static void main(String[] args) {
-        System.out.println('3'-'0');
+//        System.out.println('3'-'0');
+        for (int i = 0; i < mapping.length; i++) {
+            String temp=mapping[i];
+            System.out.println(temp);
+        }
     }
+
 }
