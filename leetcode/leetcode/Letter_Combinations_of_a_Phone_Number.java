@@ -13,6 +13,7 @@ public class Letter_Combinations_of_a_Phone_Number {
     public List<String> letterCombinations(String digits) {
         //queue：FIFO
         LinkedList<String> res=new LinkedList<>();
+        if(digits.length()==0)return res;
         res.add("");
         for (int i = 0; i < digits.length(); i++) {
             int x= digits.charAt(i)-'0';
