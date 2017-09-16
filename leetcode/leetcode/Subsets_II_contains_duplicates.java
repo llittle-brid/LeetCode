@@ -3,11 +3,11 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by DELL on 2017/9/11.
- *  nums中数字任意组合 顺序不限
+ * Created by DELL on 2017/9/16.
+ *
  * @author MJY
  */
-public class Subset {
+public class Subsets_II_contains_duplicates {
     public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> lists=new ArrayList<>();
         Arrays.sort(nums);
@@ -16,12 +16,12 @@ public class Subset {
     }
 
     private static void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
-            list.add(new ArrayList<>(tempList));
+        list.add(new ArrayList<>(tempList));
         for (int i = start; i < nums.length; i++) {
+            if(i>start&&nums[i]==nums[i-1])continue;//跳过除了第一个以外的重复元素
             tempList.add(nums[i]);
             backtrack(list,tempList,nums,i+1);
             tempList.remove(tempList.size()-1);
         }
     }
-
 }
